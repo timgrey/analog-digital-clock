@@ -1,15 +1,15 @@
 import './App.css';
 import React from 'react';
 import Moment from 'moment';
-import AnalogClock from './Components/AnalogClock'
+import ClockDigit from './Components/ClockDigit';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hours: '00',
-      minutes: '00',
-      seconds: '00',
+      hour: '00',
+      minute: '00',
+      second: '00',
     };
   }
 
@@ -26,23 +26,25 @@ class App extends React.Component {
 
   tick() {
     this.setState({
-      hours: Moment().format('hh'),
-      minutes: Moment().format('mm'),
-      seconds: Moment().format('ss'),
+      hour: Moment().format('hh'),
+      minute: Moment().format('mm'),
+      second: Moment().format('ss'),
     });
-  }
-
-  currentTime() {
-    return `${this.state.hours}:${this.state.minutes}:${this.state.seconds}`
   }
 
   render() {
     return (
-      <div className="App">
-        <p className="App-clock">
-          The time is {this.currentTime()}.
-        </p>
-        <AnalogClock />
+      <div className="app">
+        <div className="clock">
+          <ClockDigit digit={this.state.hour[0]} />
+          <ClockDigit digit={this.state.hour[1]} />
+          <div className="colon">:</div>
+          <ClockDigit digit={this.state.minute[0]} />
+          <ClockDigit digit={this.state.minute[1]} />
+          <div className="colon">:</div>
+          <ClockDigit digit={this.state.second[0]} />
+          <ClockDigit digit={this.state.second[1]} />
+        </div>
       </div>
     );
   }

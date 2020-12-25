@@ -3,6 +3,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: lightgrey;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colon {
+  font-size: 100px;
+  transform: translateY(-30%)
 }
 
 @keyframes App-logo-spin {
