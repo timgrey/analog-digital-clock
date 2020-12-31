@@ -14,9 +14,12 @@
   align-items: center;
 }
 
-.colon {
-  font-size: 100px;
-  transform: translateY(-30%)
+.colon div {
+  height: 2vh;
+  width: 2vh;
+  margin: 14vh 2vh;
+  border-radius: 100%;
+  background: black;
 }
 
 @keyframes App-logo-spin {

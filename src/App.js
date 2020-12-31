@@ -38,10 +38,16 @@ class App extends React.Component {
         <div className="clock">
           <ClockDigit digit={this.state.hour[0]} />
           <ClockDigit digit={this.state.hour[1]} />
-          <div className="colon">:</div>
+          <div className="colon">
+            <div />
+            <div />
+          </div>
           <ClockDigit digit={this.state.minute[0]} />
           <ClockDigit digit={this.state.minute[1]} />
-          <div className="colon">:</div>
+          <div className="colon">
+            <div />
+            <div />
+          </div>
           <ClockDigit digit={this.state.second[0]} />
           <ClockDigit digit={this.state.second[1]} />
         </div>
